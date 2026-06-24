@@ -18,4 +18,5 @@ notes/
 # Local environment files
 .python-version
 .env.*
-
+.venv
+CLAUDE.md
