@@ -223,6 +223,7 @@ metadata = {
 | Safety & Security | Show the attack and the mitigation side by side. Defensive framing only. |
 | Deployment | Report real numbers — latency, tokens/sec, cost. |
 | Observability | Show a real trace with token counts and cost attached. |
+| Paper Implementations | Link the paper (title, arXiv ID, date) up front. Reproduce the claim at a size that runs on CPU and say what you shrank. Close with what it changes for someone building things. |
 
 ---
 

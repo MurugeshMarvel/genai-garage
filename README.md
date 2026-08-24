@@ -32,7 +32,7 @@ More: [00-Foundations/00-Foundations_Readme.md](./00-Foundations/00-Foundations_
 |---|---|---|
 | [00 · Tokenization](./00-Foundations/00-Tokenization/00-Introduction.ipynb) | How raw text gets chopped into tokens the model can read. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MurugeshMarvel/genai-garage/blob/main/00-Foundations/00-Tokenization/00-Introduction.ipynb) |
 | [01 · Embeddings](./00-Foundations/01-Embeddings/00-Introduction.ipynb) | How tokens turn into vectors that carry meaning. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MurugeshMarvel/genai-garage/blob/main/00-Foundations/01-Embeddings/00-Introduction.ipynb) |
-| [02 · Attention & Softmax](./00-Foundations/02-Attention%26Softmax/00-Introduction.ipynb) | How the model decides which words to focus on. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MurugeshMarvel/genai-garage/blob/main/00-Foundations/02-Attention%26Softmax/00-Introduction.ipynb) |
+| [02 · Attention & Softmax](./00-Foundations/02-Attention_and_Softmax/00-Introduction.ipynb) | How the model decides which words to focus on. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MurugeshMarvel/genai-garage/blob/main/00-Foundations/02-Attention_and_Softmax/00-Introduction.ipynb) |
 | [03 · Transformer Internals](./00-Foundations/03-Transformer_Internals/00-Introduction.ipynb) | Positional encoding, residuals and layer norm assembled into a block. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MurugeshMarvel/genai-garage/blob/main/00-Foundations/03-Transformer_Internals/00-Introduction.ipynb) |
 | [04 · Learning Objectives](./00-Foundations/04-Learning_Objectives/00-Introduction.ipynb) | What the model is actually trained to predict. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MurugeshMarvel/genai-garage/blob/main/00-Foundations/04-Learning_Objectives/00-Introduction.ipynb) |
 | [05 · Training Mechanics](./00-Foundations/05-Training_Mechanics/00-Introduction.ipynb) | Loss, gradients, optimisers and the schedules that make training work. | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MurugeshMarvel/genai-garage/blob/main/00-Foundations/05-Training_Mechanics/00-Introduction.ipynb) |
@@ -98,7 +98,7 @@ Watch what's happening in production: tracing, token and cost tracking, drift de
 
 ### Paper Implementations & Discussions — *planned*
 
-Take a recent paper and reproduce its core idea in runnable code, with a short discussion of what it changes and why it matters. One folder per paper, each linking back to the original. Subsections to be defined.
+Take a recent paper and reproduce its core idea in runnable code, with a short discussion of what it changes and why it matters. One folder per paper, each linking back to the original. No paper is in yet — the shape is written down in [11-Paper_Implementations_and_Discussions/README.md](./11-Paper_Implementations_and_Discussions/README.md).
 
 ---
 
