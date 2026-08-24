@@ -52,8 +52,6 @@ _MODEL_REGISTRY: dict[str, str] = {
     "o3-mini":                "auto_openai",
     "o1":                     "auto_openai",
     "o1-mini":                "auto_openai",
-    # Bedrock application inference profile (account-specific)
-    "arn:aws:bedrock:us-east-1:791532114280:application-inference-profile/ry2uzni39tf7": "bedrock_claude",
     # Claude via Bedrock — full model IDs
     "anthropic.claude-opus-4-8-20251101-v1:0":   "bedrock_claude",
     "anthropic.claude-sonnet-5-20251029-v1:0":   "bedrock_claude",
@@ -98,10 +96,15 @@ _PROVIDER_MAP = {
 # Default model: override via DEFAULT_LLM_MODEL env var or the default_model param.
 _DEFAULT_MODEL_ENV = "DEFAULT_LLM_MODEL"
 
-# The repo default — application inference profile wired for this AWS account.
-# Override with DEFAULT_LLM_MODEL env var or the default_model param.
-_BEDROCK_APP_PROFILE = "arn:aws:bedrock:us-east-1:791532114280:application-inference-profile/ry2uzni39tf7"
-_FALLBACK_MODEL = _BEDROCK_APP_PROFILE
+# The repo default. If you route through a Bedrock application inference
+# profile, set BEDROCK_INFERENCE_PROFILE_ARN in your environment — it's
+# account-specific so it never belongs in source. Otherwise this falls back
+# to a plain Bedrock Claude model ID.
+# Override either way with DEFAULT_LLM_MODEL env var or the default_model param.
+_FALLBACK_MODEL = (
+    os.environ.get("BEDROCK_INFERENCE_PROFILE_ARN")
+    or "anthropic.claude-3-5-haiku-20241022-v1:0"
+)
 
 
 class LLMRouter:

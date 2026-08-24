@@ -202,7 +202,7 @@ reply = router.generate("What is layer normalisation?")
 Output looks like:
 
 ```
-[14:32:01] DEBUG    — LLMRouter ready  default_model=arn:aws:bedrock:...
+[14:32:01] DEBUG    — LLMRouter ready  default_model=anthropic.claude-3-5-haiku-20241022-v1:0
 [14:32:01] DEBUG    — auto_openai → azure_openai  (OPENAI_PROVIDER='(unset)')
 [14:32:01] DEBUG    — generate()  model=gpt-4o  provider=azure_openai  prompt_len=31
 [14:32:01] DEBUG    — → AzureOpenAI  model=gpt-4o  prompt_len=31
@@ -276,6 +276,7 @@ print(router.provider_for("ollama/mistral"))        # → "ollama"
 | `AWS_ACCESS_KEY_ID` | AWS access key (if not using `~/.aws/credentials`). |
 | `AWS_SECRET_ACCESS_KEY` | AWS secret key (if not using `~/.aws/credentials`). |
 | `DEFAULT_LLM_MODEL` | Default model ID when none is specified in code. |
+| `BEDROCK_INFERENCE_PROFILE_ARN` | Your account's Bedrock application inference profile ARN, if you route through one instead of a plain model ID. Account-specific — keep it in `.env`, never in code or notebooks. |
 
 ---
 

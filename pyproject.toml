@@ -1,5 +1,5 @@
 [project]
-name = "my-genai-garage"
+name = "genai-garage"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -10,4 +10,23 @@ dependencies = [
     "tiktoken>=0.9.0",
     "anthropic>=0.50.0",
     "matplotlib>=3.10.0",
+    "numpy>=2.1.0",
+    "torch>=2.6.0",
+    "scikit-learn>=1.5.2",
+    "transformers>=4.46.0",
+    "sentence-transformers>=3.2.0",
+    "pandas>=2.2.0",
+    "pypdf>=5.0.0",
+    "python-dotenv>=1.0.1",
 ]
+
+[project.optional-dependencies]
+rag = ["chromadb>=0.5.0"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+# The numbered section folders aren't packages, so point setuptools at the helper only.
+[tool.setuptools]
+packages = ["garage_helper"]
